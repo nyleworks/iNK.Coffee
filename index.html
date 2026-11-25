@@ -70,7 +70,7 @@
       <div class="ink-folder__body ink-grain fpanel__body" id="hero-body">
         <div class="fpanel__scroll" id="heroScroll">
           <div class="fpanel__inner">
-            <header class="fhead"><h1 class="fhead__title">Hello from iNK.</h1><p class="fhead__lead">Desserts, Coffee, Breakfast &amp; Rice. Your one-stop destination</p></header>
+            <header class="fhead"><a class="order-sticker" href="#menu" style="--rot:8deg"><span class="order-sticker__face">order<br>now<span class="order-sticker__sub">delivery</span></span></a><h1 class="fhead__title">Hello from iNK.</h1><p class="fhead__lead">Desserts, Coffee, Breakfast &amp; Rice. Your one-stop destination</p></header>
             <div class="hero__grid">
               <div class="hero__art">
                 <figure class="ink-storefront ink-storefront--taped" id="storefront">
@@ -230,6 +230,14 @@
               <p class="msearch__count" id="menuSearchCount" aria-live="polite"></p>
               <ul class="msearch__results" id="menuResults" hidden></ul>
             </div>
+            <!-- Delivery: when the store pages are live, put each link in href and delete data-soon (also in Find us). -->
+            <div class="order" role="group" aria-labelledby="orderMenuTitle">
+              <p class="order__title" id="orderMenuTitle"><span class="order__ico" aria-hidden="true"><svg class="order__mark" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8" fill="var(--paper)" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="17.5" r="1.8" fill="var(--paper)" stroke="currentColor" stroke-width="2"/></svg></span>Order delivery</p>
+              <div class="order__links">
+                <a class="order__btn order__btn--grab" href="#" data-soon target="_blank" rel="noopener" aria-label="Order on GrabFood (link coming soon)"><span class="order__dot" aria-hidden="true"></span>GrabFood<span class="order__after" aria-hidden="true">↗</span></a>
+                <a class="order__btn order__btn--panda" href="#" data-soon target="_blank" rel="noopener" aria-label="Order on foodpanda (link coming soon)"><span class="order__dot" aria-hidden="true"></span>foodpanda<span class="order__after" aria-hidden="true">↗</span></a>
+              </div>
+            </div>
             <div class="mclose"><button type="button" class="ink-btn ink-btn--secondary ink-btn--sm" id="menuCloseAll" aria-controls="menuSheets" aria-pressed="false">Collapse menu</button></div>
             <div class="sheets sheets--menu" id="menuSheets">
               <div class="sheets__tabs" role="tablist" aria-label="Menu categories" id="tabList"></div>
@@ -281,6 +289,13 @@
             <div class="ink-card__body">
               <p class="find__p find__addr">Lot 57, Ground Floor, Wong Kwok Commercial Centre, Jalan Bundusan, Penampang, 88300 Kota Kinabalu, Sabah</p>
               <p class="find__maps"><a class="ink-btn ink-btn--secondary ink-btn--sm" href="https://waze.com/ul?q=iNK.%20Cafe%2C%20Wong%20Kwok%20Commercial%20Centre%2C%20Penampang%2C%20Sabah&amp;navigate=yes" target="_blank" rel="noopener">Waze<span class="ink-btn__after" aria-hidden="true">↗</span></a><a class="ink-btn ink-btn--secondary ink-btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=iNK.%20Cafe%2C%20Wong%20Kwok%20Commercial%20Centre%2C%20Penampang%2C%20Sabah" target="_blank" rel="noopener">Google Maps<span class="ink-btn__after" aria-hidden="true">↗</span></a></p>
+            </div>
+          </section>
+              <section class="ink-card" id="delivery">
+            <header class="ink-card__head"><span class="ink-card__index">03</span><h3 class="ink-card__title">Delivery.</h3></header>
+            <div class="ink-card__body">
+              <p class="find__p">Can’t make it in? Order iNK. to your door.</p>
+              <p class="find__maps"><a class="ink-btn ink-btn--secondary ink-btn--sm order__cardbtn order__btn--grab" href="#" data-soon target="_blank" rel="noopener" aria-label="Order on GrabFood (link coming soon)"><span class="order__dot" aria-hidden="true"></span>GrabFood<span class="ink-btn__after" aria-hidden="true">↗</span></a><a class="ink-btn ink-btn--secondary ink-btn--sm order__cardbtn order__btn--panda" href="#" data-soon target="_blank" rel="noopener" aria-label="Order on foodpanda (link coming soon)"><span class="order__dot" aria-hidden="true"></span>foodpanda<span class="ink-btn__after" aria-hidden="true">↗</span></a></p>
             </div>
           </section>
               </div>
