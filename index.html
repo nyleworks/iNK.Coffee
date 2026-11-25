@@ -230,12 +230,13 @@
               <p class="msearch__count" id="menuSearchCount" aria-live="polite"></p>
               <ul class="msearch__results" id="menuResults" hidden></ul>
             </div>
-            <!-- Delivery: when the store pages are live, put each link in href and delete data-soon (also in Find us). -->
+            <!-- Delivery and pickup: when the store pages and WhatsApp number are live, put each link in href and delete data-soon (also in Find us). WhatsApp pickup link format: https://wa.me/60XXXXXXXXX?text=Hi%20iNK.%2C%20kerbside%20pickup%20order%3A -->
             <div class="order" role="group" aria-labelledby="orderMenuTitle">
-              <p class="order__title" id="orderMenuTitle"><span class="order__ico" aria-hidden="true"><svg class="order__mark" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8" fill="var(--paper)" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="17.5" r="1.8" fill="var(--paper)" stroke="currentColor" stroke-width="2"/></svg></span>Order delivery</p>
+              <p class="order__title" id="orderMenuTitle"><span class="order__ico" aria-hidden="true"><svg class="order__mark" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8" fill="var(--paper)" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="17.5" r="1.8" fill="var(--paper)" stroke="currentColor" stroke-width="2"/></svg></span>Delivery or pickup</p>
               <div class="order__links">
                 <a class="order__btn order__btn--grab" href="#" data-soon target="_blank" rel="noopener" aria-label="Order on GrabFood (link coming soon)"><span class="order__dot" aria-hidden="true"></span>GrabFood<span class="order__after" aria-hidden="true">↗</span></a>
                 <a class="order__btn order__btn--panda" href="#" data-soon target="_blank" rel="noopener" aria-label="Order on foodpanda (link coming soon)"><span class="order__dot" aria-hidden="true"></span>foodpanda<span class="order__after" aria-hidden="true">↗</span></a>
+                <a class="order__btn order__btn--pickup" href="#" data-soon target="_blank" rel="noopener" aria-label="Order ahead for kerbside pickup on WhatsApp (link coming soon)"><svg class="order__wa" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4.3 19.7l1.1-3.9A8.2 8.2 0 1 1 8.4 18.7z"/><path fill="currentColor" d="M9.3 7.9c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.5l-.5.6c-.1.1-.1.3 0 .4.6 1.1 1.5 1.9 2.6 2.5.2.1.3.1.4-.1l.6-.7c.1-.2.3-.2.5-.1l1.6.8c.2.1.3.2.3.4 0 .7-.4 1.4-1.1 1.6-.6.2-1.4.2-2.9-.5-1.9-.9-3.3-2.6-3.8-3.6-.5-1-.4-1.9.1-2.5.3-.4.6-.5.8-.5z"/></svg>Kerbside pickup<span class="order__after" aria-hidden="true">↗</span></a>
               </div>
             </div>
             <div class="mclose"><button type="button" class="ink-btn ink-btn--secondary ink-btn--sm" id="menuCloseAll" aria-controls="menuSheets" aria-pressed="false">Collapse menu</button></div>
@@ -292,10 +293,20 @@
             </div>
           </section>
               <section class="ink-card" id="delivery">
-            <header class="ink-card__head"><span class="ink-card__index">03</span><h3 class="ink-card__title">Delivery.</h3></header>
+            <header class="ink-card__head"><span class="ink-card__index">03</span><h3 class="ink-card__title">Delivery &amp; pickup.</h3></header>
             <div class="ink-card__body">
               <p class="find__p">Can’t make it in? Order iNK. to your door.</p>
               <p class="find__maps"><a class="ink-btn ink-btn--secondary ink-btn--sm order__cardbtn order__btn--grab" href="#" data-soon target="_blank" rel="noopener" aria-label="Order on GrabFood (link coming soon)"><span class="order__dot" aria-hidden="true"></span>GrabFood<span class="ink-btn__after" aria-hidden="true">↗</span></a><a class="ink-btn ink-btn--secondary ink-btn--sm order__cardbtn order__btn--panda" href="#" data-soon target="_blank" rel="noopener" aria-label="Order on foodpanda (link coming soon)"><span class="order__dot" aria-hidden="true"></span>foodpanda<span class="ink-btn__after" aria-hidden="true">↗</span></a></p>
+              <div class="pickup">
+                <h4 class="pickup__title">Kerbside pickup</h4>
+                <p class="find__p">Stay in your car. We’ll bring it out.</p>
+                <ol class="pickup__steps">
+                  <li><b>Order ahead</b> on WhatsApp.</li>
+                  <li><b>Tell us your car</b>: colour and plate number.</li>
+                  <li><b>Message “I’m here”</b> when you pull up outside.</li>
+                </ol>
+                <p class="find__maps"><a class="ink-btn ink-btn--secondary ink-btn--sm order__cardbtn" href="#" data-soon target="_blank" rel="noopener" aria-label="Order ahead on WhatsApp (link coming soon)"><svg class="order__wa" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4.3 19.7l1.1-3.9A8.2 8.2 0 1 1 8.4 18.7z"/><path fill="currentColor" d="M9.3 7.9c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.5l-.5.6c-.1.1-.1.3 0 .4.6 1.1 1.5 1.9 2.6 2.5.2.1.3.1.4-.1l.6-.7c.1-.2.3-.2.5-.1l1.6.8c.2.1.3.2.3.4 0 .7-.4 1.4-1.1 1.6-.6.2-1.4.2-2.9-.5-1.9-.9-3.3-2.6-3.8-3.6-.5-1-.4-1.9.1-2.5.3-.4.6-.5.8-.5z"/></svg>Order ahead on WhatsApp<span class="ink-btn__after" aria-hidden="true">↗</span></a></p>
+              </div>
             </div>
           </section>
               </div>
