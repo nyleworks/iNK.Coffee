@@ -85,3 +85,9 @@
 .pickup__steps li::before{content:counter(pk);position:absolute;left:0;top:0;display:grid;place-items:center;width:22px;height:22px;background:var(--ink);color:var(--paper);font:700 12px/1 var(--font-mono);transform:rotate(-4deg)}
 .pickup__steps li:nth-child(even)::before{transform:rotate(3deg)}
 .pickup .find__maps{margin-top:var(--space-4)}
+
+/* No page-edge strips beside the folders; wider folders on phones */
+.fpanel{--peek:0px}
+.fpanel::before{content:none;display:none}
+@media (max-width:640px){.fpanel{--peek:0px}.app{padding-left:max(8px,env(safe-area-inset-left,0px));padding-right:max(8px,env(safe-area-inset-right,0px))}}
+@media (min-width:641px){.fpanel{--peek:0px}}
